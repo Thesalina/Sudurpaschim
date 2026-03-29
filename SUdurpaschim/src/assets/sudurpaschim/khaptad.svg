@@ -1,0 +1,16 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#18362C"/>
+  <rect width="900" height="700" fill="url(#paint0_linear_2_2)"/>
+  <circle cx="706" cy="146" r="60" fill="#E7B16C"/>
+  <path d="M0 430L98 386L184 416L294 316L380 360L470 300L596 416L710 340L900 474V700H0V430Z" fill="#385C4E"/>
+  <path d="M0 502L118 470L238 520L342 430L458 500L572 450L706 544L824 498L900 530V700H0V502Z" fill="#2C4A3D"/>
+  <path d="M0 566H900V700H0V566Z" fill="#8DA46E"/>
+  <text x="68" y="112" fill="#FFF4E7" font-family="Georgia, serif" font-size="54">Khaptad</text>
+  <text x="70" y="156" fill="#E8C79B" font-family="Arial, sans-serif" font-size="21" letter-spacing="4">MEADOWS, PINES, PILGRIMAGE</text>
+  <defs>
+    <linearGradient id="paint0_linear_2_2" x1="450" y1="0" x2="450" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#244136"/>
+      <stop offset="1" stop-color="#9BB17A"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,22 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#10231C"/>
+  <rect width="1600" height="1000" fill="url(#paint0_linear_1_2)"/>
+  <circle cx="1220" cy="184" r="90" fill="#E6B47A" fill-opacity="0.95"/>
+  <path d="M0 702L182 594L274 648L436 438L560 574L672 496L864 712L1018 494L1198 694L1348 550L1600 770V1000H0V702Z" fill="#26473B"/>
+  <path d="M0 766L166 706L304 770L474 586L598 712L706 646L848 796L1030 632L1214 818L1382 690L1600 848V1000H0V766Z" fill="#1A352B"/>
+  <path d="M0 846L162 796L324 834L482 748L650 832L808 774L1038 882L1220 804L1418 876L1600 820V1000H0V846Z" fill="#132822"/>
+  <rect y="764" width="1600" height="236" fill="url(#paint1_linear_1_2)"/>
+  <text x="132" y="174" fill="#FFF4E7" font-family="Georgia, serif" font-size="92" font-style="italic">Sudurpashchim</text>
+  <text x="140" y="246" fill="#E6B47A" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">THE UNEXPLORED WEST</text>
+  <defs>
+    <linearGradient id="paint0_linear_1_2" x1="800" y1="0" x2="800" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173128"/>
+      <stop offset="0.56" stop-color="#25463A"/>
+      <stop offset="1" stop-color="#F6EFE1"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_1_2" x1="800" y1="764" x2="800" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#244136" stop-opacity="0"/>
+      <stop offset="1" stop-color="#10231C" stop-opacity="0.38"/>
+    </linearGradient>
+  </defs>
+</svg>

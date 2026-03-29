@@ -1,0 +1,19 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#173128"/>
+  <rect width="900" height="700" fill="url(#paint0_linear_8_2)"/>
+  <circle cx="450" cy="228" r="82" fill="#F0C58A"/>
+  <rect x="316" y="316" width="268" height="248" rx="134" fill="#F6EFE1"/>
+  <path d="M356 300C356 238.144 406.144 188 468 188C529.856 188 580 238.144 580 300V328H356V300Z" fill="#1D2620"/>
+  <circle cx="412" cy="350" r="10" fill="#173128"/>
+  <circle cx="492" cy="350" r="10" fill="#173128"/>
+  <path d="M422 408C446 430 470 430 494 408" stroke="#173128" stroke-width="10" stroke-linecap="round"/>
+  <path d="M258 592C312 530 364 498 450 498C536 498 588 530 642 592" stroke="#E7B16C" stroke-width="18" stroke-linecap="round"/>
+  <text x="80" y="108" fill="#FFF4E7" font-family="Georgia, serif" font-size="54">Tharu Heritage</text>
+  <text x="82" y="152" fill="#F5DEBC" font-family="Arial, sans-serif" font-size="20" letter-spacing="4">COMMUNITY, CRAFT, FOOD, MEMORY</text>
+  <defs>
+    <linearGradient id="paint0_linear_8_2" x1="450" y1="0" x2="450" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#26473B"/>
+      <stop offset="1" stop-color="#A56531"/>
+    </linearGradient>
+  </defs>
+</svg>

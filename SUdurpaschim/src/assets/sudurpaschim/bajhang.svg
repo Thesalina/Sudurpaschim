@@ -1,0 +1,16 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#12251E"/>
+  <rect width="900" height="700" fill="url(#paint0_linear_6_2)"/>
+  <path d="M0 420L114 360L206 410L346 266L468 420L602 286L720 444L900 324V700H0V420Z" fill="#264439"/>
+  <path d="M0 510L152 470L276 506L424 436L574 516L730 450L900 548V700H0V510Z" fill="#1A332A"/>
+  <path d="M174 544L250 496L324 544" stroke="#E7B16C" stroke-width="10" stroke-linecap="round"/>
+  <path d="M610 568L674 522L742 568" stroke="#F3DEC0" stroke-width="10" stroke-linecap="round"/>
+  <text x="70" y="114" fill="#FFF4E7" font-family="Georgia, serif" font-size="52">Bajhang</text>
+  <text x="72" y="158" fill="#E7B16C" font-family="Arial, sans-serif" font-size="20" letter-spacing="4">REMOTE TRAILS, HIDDEN VALLEYS</text>
+  <defs>
+    <linearGradient id="paint0_linear_6_2" x1="450" y1="0" x2="450" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#203A30"/>
+      <stop offset="1" stop-color="#0F211C"/>
+    </linearGradient>
+  </defs>
+</svg>
