@@ -1,16 +1,15 @@
-# React + Vite
+Know Sudurpaschim Well 🌄
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web platform dedicated to exploring, understanding, and promoting the rich culture, geography, history, and development of Nepal’s Sudurpaschim Province.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📌 Overview
 
-## Expanding the ESLint configuration
+Know Sudurpaschim Well is an informational website designed to provide users with detailed insights into Sudurpaschim Province. It aims to educate locals, students, tourists, and researchers by presenting curated content about the region in an accessible and engaging way.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🎯 Objectives
+Promote awareness about Sudurpaschim Province
+Showcase cultural heritage, traditions, and festivals
+Provide geographical and historical information
