@@ -33,7 +33,7 @@ export default function PageLayout() {
       </div>
       <ScrollToTop />
       <Navbar isScrolled={isScrolled} />
-      <main className="relative z-10">
+      <main className="relative z-10 ">
         <Outlet />
       </main>
       <Footer />

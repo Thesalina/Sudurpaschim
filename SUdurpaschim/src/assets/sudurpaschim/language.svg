@@ -1,0 +1,16 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#1B352B"/>
+  <rect width="900" height="700" fill="url(#paint0_linear_3_2)"/>
+  <rect x="192" y="222" width="516" height="272" rx="34" fill="#F6EFE1"/>
+  <path d="M340 494L280 562V494H340Z" fill="#F6EFE1"/>
+  <text x="258" y="326" fill="#173128" font-family="Georgia, serif" font-size="92">डोटेली</text>
+  <text x="258" y="404" fill="#B96A2A" font-family="Arial, sans-serif" font-size="34" letter-spacing="2">Doteli</text>
+  <text x="72" y="112" fill="#FFF4E7" font-family="Georgia, serif" font-size="54">Doteli Language</text>
+  <text x="74" y="156" fill="#F2D8B3" font-family="Arial, sans-serif" font-size="20" letter-spacing="4">VOICE, DIALECT, REGIONAL IDENTITY</text>
+  <defs>
+    <linearGradient id="paint0_linear_3_2" x1="450" y1="0" x2="450" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#27453A"/>
+      <stop offset="1" stop-color="#A66631"/>
+    </linearGradient>
+  </defs>
+</svg>

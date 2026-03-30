@@ -1,0 +1,18 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#173128"/>
+  <rect width="900" height="700" fill="url(#paint0_linear_4_2)"/>
+  <circle cx="330" cy="220" r="64" fill="#F2D8B3"/>
+  <circle cx="560" cy="220" r="64" fill="#F2D8B3"/>
+  <path d="M250 518L286 308H374L412 518H250Z" fill="#F6EFE1"/>
+  <path d="M474 518L514 308H606L648 518H474Z" fill="#E7B16C"/>
+  <path d="M522 360H598" stroke="#FFF4E7" stroke-width="12" stroke-linecap="round"/>
+  <path d="M286 360H366" stroke="#B7682A" stroke-width="12" stroke-linecap="round"/>
+  <text x="72" y="112" fill="#FFF4E7" font-family="Georgia, serif" font-size="54">Traditional Dress</text>
+  <text x="74" y="156" fill="#F2D8B3" font-family="Arial, sans-serif" font-size="20" letter-spacing="4">ATTIRE, JEWELRY, CEREMONY, IDENTITY</text>
+  <defs>
+    <linearGradient id="paint0_linear_4_2" x1="450" y1="0" x2="450" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2E4C40"/>
+      <stop offset="1" stop-color="#8D5C30"/>
+    </linearGradient>
+  </defs>
+</svg>

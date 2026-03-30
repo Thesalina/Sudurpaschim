@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PageHero from "../components/shared/PageHero";
+import { submitContactMessage } from "../lib/api";
 import { contactDetails, siteVisuals } from "../data/siteData";
 
 const initialForm = {
@@ -12,14 +13,17 @@ export default function Contact() {
   const [formData, setFormData] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   function handleChange(event) {
     const { name, value } = event.target;
     setFormData((current) => ({ ...current, [name]: value }));
     setErrors((current) => ({ ...current, [name]: "" }));
+    setSubmitError("");
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     const nextErrors = {};
@@ -40,10 +44,21 @@ export default function Contact() {
 
     setErrors(nextErrors);
     setIsSubmitted(false);
+    setSubmitError("");
 
-    if (Object.keys(nextErrors).length === 0) {
+    if (Object.keys(nextErrors).length > 0) {
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      await submitContactMessage(formData);
       setIsSubmitted(true);
       setFormData(initialForm);
+    } catch (error) {
+      setSubmitError(error.message || "Failed to send message.");
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -52,7 +67,7 @@ export default function Contact() {
       <PageHero
         eyebrow="Contact and connection"
         title="Ask, Plan, and Learn More"
-        description="This page invites travel questions, collaboration, and regional curiosity. For now the form is frontend-only and ready to connect to your backend later."
+        description="Ask about routes, culture, partnerships, or anything you need to plan time in Sudurpashchim."
         image={siteVisuals.gaura}
       />
       <section className="mx-auto max-w-[1400px] px-5 py-16 sm:px-8 lg:px-[min(7vw,84px)]">
@@ -77,8 +92,7 @@ export default function Contact() {
           >
             <h2 className="font-[Cormorant_Garamond] text-5xl">Start a conversation</h2>
             <p className="mt-4 max-w-xl text-white/75">
-              Ask about places, share an idea, or use this as the future entry
-              point for your backend-powered inquiry flow.
+              Ask about places, share an idea, or plan a visit. We’ll get back with practical answers.
             </p>
 
             <div className="mt-6 grid gap-4">
@@ -126,15 +140,21 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="rounded-full bg-[#de7d33] px-6 py-3.5 font-bold text-[#fff7eb]"
+                disabled={isSubmitting}
+                className="rounded-full bg-[#de7d33] px-6 py-3.5 font-bold text-[#fff7eb] disabled:cursor-not-allowed disabled:opacity-70"
               >
-                Send message
+                {isSubmitting ? "Sending..." : "Send message"}
               </button>
+
+              {submitError ? (
+                <div className="rounded-[1.2rem] border border-[#ffd3b0]/25 bg-[#7a2f1f]/25 px-5 py-4 text-sm text-[#ffe4d1]">
+                  {submitError}
+                </div>
+              ) : null}
 
               {isSubmitted ? (
                 <div className="rounded-[1.2rem] border border-white/12 bg-white/10 px-5 py-4 text-sm text-white/85">
-                  The frontend form is working. Next you can connect this to your
-                  Express API and MongoDB message collection.
+                  Thanks for reaching out. We’ll reply soon.
                 </div>
               ) : null}
             </div>

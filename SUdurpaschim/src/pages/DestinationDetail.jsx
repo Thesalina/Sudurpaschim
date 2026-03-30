@@ -1,12 +1,69 @@
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import DestinationCard from "../components/shared/DestinationCard";
-import { destinationItems } from "../data/siteData";
+import { fetchDestinationById, fetchDestinations } from "../lib/api";
 
 export default function DestinationDetail() {
   const { destinationId } = useParams();
-  const destination = destinationItems.find((item) => item.id === destinationId);
+  const [destination, setDestination] = useState(null);
+  const [allDestinations, setAllDestinations] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  if (!destination) {
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadDestination() {
+      try {
+        setIsLoading(true);
+        setError("");
+
+        const [destinationData, allDestinationsData] = await Promise.all([
+          fetchDestinationById(destinationId),
+          fetchDestinations(),
+        ]);
+
+        if (isMounted) {
+          setDestination(destinationData);
+          setAllDestinations(allDestinationsData);
+        }
+      } catch (loadError) {
+        if (isMounted) {
+          setError(loadError.message || "Failed to load destination.");
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    }
+
+    loadDestination();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [destinationId]);
+
+  const relatedDestinations = useMemo(() => {
+    if (!destination) {
+      return [];
+    }
+
+    return allDestinations.filter((item) => destination.nearby?.includes(item.id));
+  }, [allDestinations, destination]);
+
+  if (isLoading) {
+    return (
+      <section className="px-5 pb-20 pt-36 sm:px-8 lg:px-[min(7vw,84px)]">
+        <div className="mx-auto max-w-3xl rounded-[2rem] bg-white/70 p-8 text-[#4e564b]">
+          Loading destination...
+        </div>
+      </section>
+    );
+  }
+
+  if (error || !destination) {
     return (
       <section className="px-5 pb-20 pt-36 sm:px-8 lg:px-[min(7vw,84px)]">
         <div className="mx-auto max-w-3xl rounded-[2rem] bg-white/70 p-8">
@@ -14,8 +71,7 @@ export default function DestinationDetail() {
             Destination not found
           </h1>
           <p className="mt-4 text-[#4e564b]">
-            This route is ready. You can later replace the static lookup with an
-            API call by slug or id.
+            {error || "This destination could not be loaded from the API."}
           </p>
           <Link
             to="/destinations"
@@ -27,10 +83,6 @@ export default function DestinationDetail() {
       </section>
     );
   }
-
-  const relatedDestinations = destinationItems.filter((item) =>
-    destination.nearby?.includes(item.id)
-  );
 
   return (
     <section className="px-5 pb-20 pt-32 sm:px-8 lg:px-[min(7vw,84px)]">

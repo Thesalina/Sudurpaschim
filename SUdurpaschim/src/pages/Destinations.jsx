@@ -1,25 +1,51 @@
-import { useMemo, useState } from "react";
-import { destinationItems, siteVisuals } from "../data/siteData";
-import DestinationCard from "../components/shared/DestinationCard";
+import { useEffect, useState } from "react";
 import PageHero from "../components/shared/PageHero";
+import DestinationCard from "../components/shared/DestinationCard";
+import { fetchDestinations } from "../lib/api";
+import { siteVisuals } from "../data/siteData";
 
 const categoryFilters = ["All", "Nature", "Trekking", "Wildlife", "Culture"];
 
 export default function Destinations() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [searchValue, setSearchValue] = useState("");
+  const [destinations, setDestinations] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  const filteredDestinations = useMemo(() => {
-    return destinationItems.filter((destination) => {
-      const matchesFilter =
-        activeFilter === "All" || destination.category === activeFilter;
-      const matchesSearch =
-        destination.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-        destination.location.toLowerCase().includes(searchValue.toLowerCase()) ||
-        destination.sub.toLowerCase().includes(searchValue.toLowerCase());
+  useEffect(() => {
+    let isMounted = true;
 
-      return matchesFilter && matchesSearch;
-    });
+    async function loadDestinations() {
+      try {
+        setIsLoading(true);
+        setError("");
+
+        const data = await fetchDestinations({
+          category: activeFilter,
+          search: searchValue,
+        });
+
+        if (isMounted) {
+          setDestinations(data);
+        }
+      } catch (loadError) {
+        if (isMounted) {
+          setError(loadError.message || "Failed to load destinations.");
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    }
+
+    const timeoutId = setTimeout(loadDestinations, 250);
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timeoutId);
+    };
   }, [activeFilter, searchValue]);
 
   return (
@@ -41,9 +67,7 @@ export default function Destinations() {
               Find places by landscape and story
             </h2>
             <p className="mt-4 max-w-2xl text-[#4e564b]">
-              Use filters to move through nature, trekking, wildlife, and
-              culture-linked places. This is the same structure you can later
-              back with API data and database categories.
+              Filter by theme or search by name and district to discover the mix of high trails, wetlands, hill towns, and pilgrimage sites.
             </p>
           </div>
 
@@ -79,19 +103,28 @@ export default function Destinations() {
         </div>
 
         <div className="mt-4 text-sm text-[#4e564b]">
-          Showing {filteredDestinations.length} place
-          {filteredDestinations.length === 1 ? "" : "s"}
+          {isLoading
+            ? "Loading places..."
+            : `Showing ${destinations.length} place${destinations.length === 1 ? "" : "s"}`}
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {filteredDestinations.map((destination) => (
-            <div key={destination.id} className="min-h-[320px]">
-              <DestinationCard destination={destination} />
-            </div>
-          ))}
-        </div>
+        {error ? (
+          <div className="mt-8 rounded-[1.6rem] border border-[#c76b4c]/18 bg-[#fff4ee] p-6 text-[#8a3e28]">
+            {error}
+          </div>
+        ) : null}
 
-        {filteredDestinations.length === 0 ? (
+        {!error && !isLoading ? (
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {destinations.map((destination) => (
+              <div key={destination.id} className="min-h-[320px]">
+                <DestinationCard destination={destination} />
+              </div>
+            ))}
+          </div>
+        ) : null}
+
+        {!error && !isLoading && destinations.length === 0 ? (
           <div className="mt-10 rounded-[1.6rem] border border-dashed border-[#173128]/18 bg-white/50 p-8 text-center text-[#4e564b]">
             No places matched that filter. Try another category or clear the search.
           </div>

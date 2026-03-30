@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
-import { destinationItems } from "../../data/siteData";
 import DestinationCard from "../shared/DestinationCard";
 import SectionHeading from "../shared/SectionHeading";
 
-export default function DestinationsSection() {
+export default function DestinationsSection({
+  destinations = [],
+  isLoading = false,
+  error = "",
+}) {
   return (
     <section className="mx-auto max-w-[1400px] px-5 pb-20 sm:px-8 lg:px-[min(7vw,84px)]">
       <SectionHeading
@@ -12,15 +15,29 @@ export default function DestinationsSection() {
         description="Mountains, reserves, hill towns, and remote valleys provide an entry point into the wider identity of the province."
       />
 
-      <div className="mt-10 grid auto-rows-[250px] grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {destinationItems.map((destination) => (
-          <DestinationCard
-            key={destination.id}
-            destination={destination}
-            featured={destination.id === "khaptad"}
-          />
-        ))}
-      </div>
+      {isLoading ? (
+        <div className="mt-10 rounded-[1.6rem] bg-white/70 p-6 text-[#4e564b]">
+          Loading featured places...
+        </div>
+      ) : null}
+
+      {error ? (
+        <div className="mt-10 rounded-[1.6rem] border border-[#c76b4c]/18 bg-[#fff4ee] p-6 text-[#8a3e28]">
+          {error}
+        </div>
+      ) : null}
+
+      {!isLoading && !error ? (
+        <div className="mt-10 grid auto-rows-[250px] grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {destinations.map((destination, index) => (
+            <DestinationCard
+              key={destination.id}
+              destination={destination}
+              featured={index === 0}
+            />
+          ))}
+        </div>
+      ) : null}
 
       <div className="mt-8">
         <Link

@@ -10,8 +10,7 @@ export default function Footer() {
               Sudurpashchim
             </div>
             <p className="mt-3 text-[#ecdfc8]/72">
-              A personal MERN portfolio project focused on tourism, culture, and
-              regional storytelling in far-western Nepal.
+              Discover the landscapes, culture, and people of Nepal&apos;s far west.
             </p>
           </div>
 
@@ -34,7 +33,7 @@ export default function Footer() {
             </div>
             <div>
               <div className="mb-4 text-[0.72rem] font-extrabold uppercase tracking-[0.14em] text-[#e5a45e]">
-                Project
+                Info
               </div>
               <ul className="space-y-2">
                 <li>
@@ -48,10 +47,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6 text-sm text-[#ecdfc8]/62">
-          © 2025 Sudurpashchim Tourism · Frontend scaffold for a MERN portfolio
-          build
-        </div>
+        <div className="pt-6 text-sm text-[#ecdfc8]/62">© 2025 Sudurpashchim Tourism</div>
       </div>
     </footer>
   );

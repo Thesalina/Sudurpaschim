@@ -1,0 +1,17 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#26473B"/>
+  <rect width="900" height="700" fill="url(#paint0_linear_5_2)"/>
+  <ellipse cx="450" cy="430" rx="220" ry="118" fill="#F6EFE1"/>
+  <ellipse cx="450" cy="430" rx="164" ry="78" fill="#D7B06B"/>
+  <ellipse cx="382" cy="416" rx="54" ry="34" fill="#7D9A57"/>
+  <ellipse cx="514" cy="444" rx="50" ry="30" fill="#6A7B44"/>
+  <path d="M448 292C392 292 356 332 356 390H540C540 332 504 292 448 292Z" fill="#C58A49"/>
+  <text x="72" y="112" fill="#FFF4E7" font-family="Georgia, serif" font-size="54">Dhindo and Gundruk</text>
+  <text x="74" y="156" fill="#F2D8B3" font-family="Arial, sans-serif" font-size="20" letter-spacing="4">FOOD, AGRICULTURE, SIMPLE LIVING</text>
+  <defs>
+    <linearGradient id="paint0_linear_5_2" x1="450" y1="0" x2="450" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3A5A4D"/>
+      <stop offset="1" stop-color="#B77235"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#173128"/>
+  <rect width="900" height="700" fill="url(#paint0_linear_7_2)"/>
+  <path d="M450 188L536 288H364L450 188Z" fill="#F6EFE1"/>
+  <rect x="396" y="288" width="108" height="210" rx="12" fill="#E7B16C"/>
+  <path d="M450 154V232" stroke="#F2D8B3" stroke-width="12" stroke-linecap="round"/>
+  <path d="M410 194H490" stroke="#F2D8B3" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="450" cy="360" r="34" fill="#FFF4E7"/>
+  <text x="72" y="112" fill="#FFF4E7" font-family="Georgia, serif" font-size="54">Religious Beliefs</text>
+  <text x="74" y="156" fill="#F2D8B3" font-family="Arial, sans-serif" font-size="20" letter-spacing="4">FAITH, LOCAL DEITIES, RITUAL LIFE</text>
+  <defs>
+    <linearGradient id="paint0_linear_7_2" x1="450" y1="0" x2="450" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#29453A"/>
+      <stop offset="1" stop-color="#8E5A2D"/>
+    </linearGradient>
+  </defs>
+</svg>

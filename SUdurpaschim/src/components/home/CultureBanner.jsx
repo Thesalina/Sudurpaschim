@@ -2,13 +2,19 @@ import { Link } from "react-router-dom";
 import { siteVisuals } from "../../data/siteData";
 import SectionHeading from "../shared/SectionHeading";
 
-export default function CultureBanner() {
+export default function CultureBanner({ culturePosts = [] }) {
+  const featuredPost = culturePosts[0];
+  const bannerImage = featuredPost?.image || siteVisuals.gaura;
+  const description =
+    featuredPost?.description ||
+    "Gaura Parva, Deuda folk singing, Tharu identity, and regional food traditions make the province feel culturally distinct at every stop.";
+
   return (
     <section className="relative overflow-hidden bg-[#11241d] px-5 py-28 sm:px-8 lg:px-[min(7vw,84px)]">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-60"
         style={{
-          backgroundImage: `linear-gradient(90deg, rgba(11,22,17,0.82), rgba(11,22,17,0.4)), url(${siteVisuals.gaura})`,
+          backgroundImage: `linear-gradient(90deg, rgba(11,22,17,0.82), rgba(11,22,17,0.4)), url(${bannerImage})`,
         }}
       />
       <div className="relative z-10 mx-auto max-w-[1400px]">
@@ -21,7 +27,7 @@ export default function CultureBanner() {
               <em className="font-semibold italic text-[#e5a45e]">Our Culture</em>
             </>
           }
-          description="Gaura Parva, Deuda folk singing, Tharu identity, and regional food traditions make the province feel culturally distinct at every stop."
+          description={description}
           light
         />
         <Link

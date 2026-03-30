@@ -25,8 +25,8 @@ export default function HeroSection() {
           </h1>
           <p className="mt-6 max-w-2xl text-[1.05rem] text-[#fff3e3]/85">
             Explore the land, people, culture, and journeys of Nepal&apos;s far
-            west. This platform is designed to help visitors and locals
-            understand Sudurpashchim as a region, not just a destination.
+            west. This site helps visitors and locals understand Sudurpashchim
+            as a region, not just a destination.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link

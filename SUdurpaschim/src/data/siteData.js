@@ -1,11 +1,23 @@
-import heroLandscape from "../assets/sudurpaschim/hero-landscape.svg";
-import khaptad from "../assets/sudurpaschim/khaptad.svg";
-import apiHimal from "../assets/sudurpaschim/api-himal.svg";
-import shuklaphanta from "../assets/sudurpaschim/shuklaphanta.svg";
-import dadeldhura from "../assets/sudurpaschim/dadeldhura.svg";
-import bajhang from "../assets/sudurpaschim/bajhang.svg";
-import gaura from "../assets/sudurpaschim/gaura.svg";
-import tharu from "../assets/sudurpaschim/tharu.svg";
+import heroLandscape from "../assets/sudurpaschim/heropage.avif";
+import khaptad from "../assets/sudurpaschim/khaptad.jpg";
+import apiHimal from "../assets/sudurpaschim/api.jpeg";
+import shuklaphanta from "../assets/sudurpaschim/sukhlaphata.jpg";
+import dadeldhura from "../assets/sudurpaschim/dadeldhura.jpg";
+import bajhang from "../assets/sudurpaschim/bajhang.jpg";
+import gaura from "../assets/sudurpaschim/gaura.jpg";
+import tharu from "../assets/sudurpaschim/tharuheritage.jpg";
+import deuda from "../assets/sudurpaschim/deuda.png";
+import chhaupadi from "../assets/sudurpaschim/chaupadi.jpg";
+import language from "../assets/sudurpaschim/language.jpg";
+import dress from "../assets/sudurpaschim/dress.jpg";
+import food from "../assets/sudurpaschim/food.svg";
+import village from "../assets/sudurpaschim/village.jpg";
+import religion from "../assets/sudurpaschim/religion.jpg";
+import badimalika from "../assets/sudurpaschim/badimalika.jpg";
+import ghodaghodi from "../assets/sudurpaschim/ghodaghodi-lake.jpg";
+import ramaroshan from "../assets/sudurpaschim/ramrosan.jpg";
+import bridge from "../assets/sudurpaschim/dodharachandanibridge.avif";
+import tikapur from "../assets/sudurpaschim/tikapur.jpg";
 
 export const navigationLinks = [
   { label: "Home", to: "/" },
@@ -109,7 +121,7 @@ export const destinationItems = [
       "Good for showing everyday life, not only scenic spectacle",
     ],
     special:
-      "Dadeldhura gives the project realism. It helps tell the story of how people actually move through and live within Sudurpashchim, which makes the overall platform feel more grounded and useful.",
+      "Dadeldhura shows everyday hill-town life and how people actually move through Sudurpashchim, grounding the region between plains and high trails.",
     gallery: [dadeldhura, tharu, heroLandscape],
     nearby: ["khaptad", "shuklaphanta"],
   },
@@ -210,13 +222,66 @@ export const facts = [
 export const regionHighlights = [
   "Sudurpashchim spans the Terai plains, mid-hills, and Himalayan frontier in a single province.",
   "The region is strong for trekking, wildlife, spiritual landscapes, and underrepresented cultural storytelling.",
-  "For a portfolio project, it gives you room to practice list pages, detail pages, contact flows, and API-backed content.",
+  "It offers a wide mix of journeys—treks, safaris, hill towns, and pilgrimage routes—so visitors can plan different kinds of trips from one place.",
+];
+
+export const regionOverviewCards = [
+  {
+    title: "Geography",
+    description:
+      "The province stretches from lowland plains to high Himalayan terrain, creating one of Nepal's widest landscape contrasts within a single region.",
+  },
+  {
+    title: "District Identity",
+    description:
+      "Each district adds a different rhythm to Sudurpashchim, from gateway cities and hill towns to remote valleys and pilgrimage routes.",
+  },
+  {
+    title: "Culture and Language",
+    description:
+      "Doteli, Deuda traditions, Gaura, Tharu heritage, and local belief systems shape a cultural identity that feels distinct from the rest of Nepal.",
+  },
+  {
+    title: "Why It Matters",
+    description:
+      "Sudurpashchim is often underrepresented online, which makes this region especially valuable for a deeper, more educational platform.",
+  },
+];
+
+export const districtHighlights = [
+  "Dhangadhi and Kailali function as the main lowland gateway for travel, trade, and movement.",
+  "Darchula and Bajhang represent the remote mountain frontier and stronger trekking identity.",
+  "Bajura and Achham hold pilgrimage sites, hill communities, and quieter regional stories.",
+  "Kanchanpur broadens the province with wildlife landscapes and border-connected mobility.",
+];
+
+export const travelGuideSections = [
+  {
+    title: "How to Reach",
+    description:
+      "Most journeys start through Dhangadhi by flight or long-distance road travel, then continue toward hill districts or protected areas depending on your route.",
+  },
+  {
+    title: "Where to Stay",
+    description:
+      "Accommodation ranges from city hotels and hill lodges to safari stays, homestays, and simple trekking support in remote districts.",
+  },
+  {
+    title: "Budget and Food",
+    description:
+      "Costs vary by route. City travel is simpler and more predictable, while remote hill or trekking journeys require extra transport and support planning.",
+  },
+  {
+    title: "Safety and Preparation",
+    description:
+      "Weather, road conditions, remoteness, and local support matter much more here than in easy urban trips, especially outside the plains.",
+  },
 ];
 
 export const contactDetails = [
   { label: "Base", value: "Dhangadhi, Sudurpashchim" },
-  { label: "Focus", value: "Tourism concept and portfolio build" },
-  { label: "Stack", value: "React, Tailwind, Express, MongoDB" },
+  { label: "Focus", value: "Visitor guidance, local partnerships" },
+  { label: "Response", value: "We reply as quickly as possible" },
 ];
 
 export const siteVisuals = {
