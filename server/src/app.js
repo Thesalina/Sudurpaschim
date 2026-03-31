@@ -8,7 +8,7 @@ import authRoutes from "./routes/authRoutes.js";
 
 const app = express();
 
-const allowedOrigins = (process.env.CLIENT_URLS || process.env.CLIENT_URL || "http://localhost:5173")
+const allowedOrigins = (process.env.CLIENT_URLS || process.env.CLIENT_URL || "https://sudurpaschim.vercel.app")
   .split(",")
   .map((origin) => origin.trim())
   .filter(Boolean);
