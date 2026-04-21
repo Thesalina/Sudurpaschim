@@ -76,9 +76,9 @@ Roads, hydropower, health infrastructure, education, and economic growth in Sudu
 | Layer | Technology |
 |-------|-----------|
 | Frontend | HTML5, CSS3, JavaScript / React.js |
-| Backend | Node.js / Express.js _(if applicable)_ |
-| Database | MongoDB / Firebase _(if applicable)_ |
-| Hosting | Vercel / Netlify / GitHub Pages |
+| Backend | Node.js / Express.js  |
+| Database | MongoDB |
+| Hosting | Vercel / Render |
 
 ---
 
